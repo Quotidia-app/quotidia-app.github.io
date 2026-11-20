@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Quotidia — Compte confirmé</title>
+<script>
+  // Supabase ajoute des informations de connexion à l'adresse : on les efface
+  // tout de suite, la page n'en a pas besoin.
+  if (location.hash || location.search) history.replaceState(null, '', location.pathname);
+</script>
+<style>
+  :root { --bg:#F5F3EE; --ink:#172A3A; --muted:#5b6670; --accent:#557C72; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#172A3A; --ink:#F5F3EE; --muted:#b7c0c7; --accent:#7FA79C; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width:560px; margin:0 auto; padding:64px 24px; text-align:center; }
+  .big { font-size:3rem; margin:0; }
+  h1 { font-size:1.6rem; margin:8px 0 12px; }
+  p { margin:8px 0; }
+  .muted { color:var(--muted); font-size:.95rem; margin-top:28px; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<p class="big">✅</p>
+<h1>Ton adresse e-mail est confirmée</h1>
+<p>Retourne dans l'application Quotidia et connecte-toi avec ton e-mail et ton mot de passe. Ta progression sera sauvegardée.</p>
+<p class="muted">Un problème ? Écris à <a href="mailto:quotidiaappcontact@gmail.com">quotidiaappcontact@gmail.com</a>.</p>
+</main>
+</body>
+</html>
