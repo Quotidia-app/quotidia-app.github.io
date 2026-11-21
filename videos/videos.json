@@ -1,0 +1,5 @@
+{
+  "note": "Vidéos explicatives de l'appli Quotidia. cartes : slug de la découverte → vidéo. dossiers : slug de la catégorie → liste de vidéos. Fichiers MP4 dans ce dossier (videos/cartes/, videos/dossiers/).",
+  "cartes": {},
+  "dossiers": {}
+}
