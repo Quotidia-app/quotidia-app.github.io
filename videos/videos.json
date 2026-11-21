@@ -5,6 +5,26 @@
       "url": "https://quotidia-app.github.io/videos/cartes/poulpe-trois-coeurs.mp4",
       "titre": "Le poulpe : 3 cœurs et du sang bleu",
       "duree_s": 43
+    },
+    "chien-de-pavlov": {
+      "url": "https://quotidia-app.github.io/videos/cartes/chien-de-pavlov.mp4",
+      "titre": "Pourquoi ton ventre gargouille au son d'une notif",
+      "duree_s": 45
+    },
+    "couleurs-feuilles-automne": {
+      "url": "https://quotidia-app.github.io/videos/cartes/couleurs-feuilles-automne.mp4",
+      "titre": "Les feuilles ne jaunissent pas : elles l'étaient déjà",
+      "duree_s": 40
+    },
+    "courbe-de-l-oubli": {
+      "url": "https://quotidia-app.github.io/videos/cartes/courbe-de-l-oubli.mp4",
+      "titre": "Pourquoi tu oublies si vite ce que tu apprends",
+      "duree_s": 45
+    },
+    "monopoly-origine": {
+      "url": "https://quotidia-app.github.io/videos/cartes/monopoly-origine.mp4",
+      "titre": "Le Monopoly a été inventé contre les propriétaires",
+      "duree_s": 44
     }
   },
   "dossiers": {
@@ -19,6 +39,20 @@
           "biais-de-confirmation",
           "nudges-coup-de-pouce",
           "baillement-contagieux"
+        ]
+      }
+    ],
+    "cultures-du-monde": [
+      {
+        "id": "cultures-du-monde-1",
+        "url": "https://quotidia-app.github.io/videos/dossiers/cultures-du-monde-1.mp4",
+        "titre": "Invité au bout du monde : 4 escales pour ne pas faire de gaffe",
+        "duree_s": 106,
+        "cartes": [
+          "teranga-senegal",
+          "the-a-la-menthe-maghreb",
+          "cafe-arabe-generosite",
+          "omotenashi-japon"
         ]
       }
     ]
