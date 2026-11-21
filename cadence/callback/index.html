@@ -7,6 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <title>Cadence — Connexion TikTok</title>
 <style>
+  [hidden]{display:none!important}
   body{margin:0;background:#172A3A;color:#F5F3EE;font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
   main{max-width:560px;margin:0 auto;padding:56px 24px;text-align:center}
   h1{font-size:1.5rem}
@@ -26,6 +27,14 @@
 <script>
   var p = new URLSearchParams(location.search);
   var code = p.get('code'), err = p.get('error'), state = p.get('state');
+  // Garde le code quelques minutes si la page est rechargée (il ne sert qu'une fois de toute façon).
+  try {
+    if (code) sessionStorage.setItem('cadence_code', JSON.stringify({ code: code, state: state, t: Date.now() }));
+    else if (!err) {
+      var g = JSON.parse(sessionStorage.getItem('cadence_code') || 'null');
+      if (g && Date.now() - g.t < 10 * 60 * 1000) { code = g.code; state = g.state; }
+    }
+  } catch (e) {}
   history.replaceState(null, '', location.pathname);
   var t = document.getElementById('texte');
   if (code) {
