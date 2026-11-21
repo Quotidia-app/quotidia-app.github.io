@@ -7,5 +7,14 @@
       "duree_s": 43
     }
   },
-  "dossiers": {}
+  "dossiers": {
+    "psychologie": [
+      {
+        "id": "psychologie-1",
+        "url": "https://quotidia-app.github.io/videos/dossiers/psychologie-1.mp4",
+        "titre": "4 pièges dans lesquels ton cerveau te fait tomber",
+        "duree_s": 121
+      }
+    ]
+  }
 }
