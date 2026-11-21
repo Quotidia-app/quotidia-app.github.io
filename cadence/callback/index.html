@@ -13,6 +13,8 @@
   h1{font-size:1.5rem}
   code{display:block;word-break:break-all;background:#0f1e2a;border:1px solid #2c4356;border-radius:10px;padding:14px;margin:16px 0;font-size:.9rem;color:#4FF0D2}
   button{background:#4FF0D2;color:#172A3A;border:0;border-radius:999px;padding:12px 22px;font-weight:700;font-size:1rem}
+  .lien{display:inline-block;background:transparent;color:#4FF0D2;border:1px solid #4FF0D2;border-radius:999px;padding:11px 20px;font-weight:700;text-decoration:none;margin:4px}
+  .lien.secondaire{color:#F5F3EE;border-color:#2c4356}
   .muted{color:#b7c0c7;font-size:.92rem}
 </style>
 </head>
@@ -21,7 +23,9 @@
 <h1 id="titre">Connexion à Cadence</h1>
 <p id="texte">Chargement…</p>
 <code id="code" hidden></code>
-<p><button id="copier" hidden>Copier le code</button></p>
+<p><button id="copier" hidden>1. Copier le code</button></p>
+<p id="suite" hidden><a class="lien" href="https://github.com/Quotidia-app/Cadence/actions/workflows/connecter.yml" target="_blank" rel="noopener">2. Coller le code dans GitHub ↗</a></p>
+<p><a class="lien secondaire" href="/cadence/">Revenir à Cadence</a></p>
 <p class="muted">Ce code expire après quelques minutes et ne sert qu'une fois.</p>
 </main>
 <script>
@@ -39,7 +43,8 @@
   var t = document.getElementById('texte');
   if (code) {
     document.getElementById('titre').textContent = '✅ Compte TikTok autorisé';
-    t.textContent = 'Copie ce code et colle-le à Claude pour terminer la connexion de Cadence.';
+    t.textContent = 'Copie ce code, puis colle-le dans GitHub (« Run workflow ») pour terminer la connexion. Ensuite, reviens à Cadence.';
+    document.getElementById('suite').hidden = false;
     var c = document.getElementById('code'); c.textContent = code + (state ? '\n(state : ' + state + ')' : ''); c.hidden = false;
     var b = document.getElementById('copier'); b.hidden = false;
     b.onclick = function(){ navigator.clipboard.writeText(code).then(function(){ b.textContent = 'Copié ✓'; }); };
